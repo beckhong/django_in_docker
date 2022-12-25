@@ -14,4 +14,11 @@ docker-compose run --rm app sh -c "python -B manage.py startapp core"
 
 # 建立model
 docker-compose run --rm app sh -c "python -B manage.py makemigrations"
+
+docker-compose up
+
+# open
+http://127.0.0.1:9000/
 ```
+
+

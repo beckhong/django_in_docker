@@ -3,6 +3,10 @@ services:
   app:
     build:
       context: .
+    command: >
+      sh -c 'python -B manage.py wait_for_db &&
+             python -B manage.py migrate &&
+             python -B manage.py runserver 0.0.0.0:9000'
     ports:
       - 9000:9000
     volumes:
